@@ -17,7 +17,7 @@ To invite to the game click right mouse button on the user who is online.
 - Game history and mini stats of win/lose;
 - Client/Server model.
 
-TODO: 
+### TODO list: 
 - The correct end of the game;
 - Waiting for the opponent's move;
 - Rebuild project architecture.
