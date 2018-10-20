@@ -1,0 +1,93 @@
+﻿<Window x:Class="Hosting.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        
+        Title="Сервер"
+        Icon=".\Icons\favicon.ico"
+        MinHeight="300" MinWidth="500"
+        Height="300" Width="500" 
+        ResizeMode="CanResizeWithGrip"
+        WindowStartupLocation="CenterScreen"
+        Background="#FF323232">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel
+            Grid.Row="0"
+            Orientation="Horizontal"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+            <TextBox 
+                x:Name="TextBoxHostName" 
+                Height="20"
+                Width="150"
+                Text="127.0.0.1"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                TextWrapping="NoWrap"
+            />
+            <TextBox 
+                x:Name="TextBoxPort" 
+                Height="20"
+                Width="70"
+                Text="8888"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                TextWrapping="NoWrap"
+            />
+        </StackPanel>
+
+        <StackPanel
+            Grid.Row="1"
+            Orientation="Horizontal"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+            <Button 
+                x:Name="ButtonStart" 
+                FontWeight="Medium"
+                Content="Запуск"
+                Height="25"
+                Width="90"
+                IsDefault="True"
+                Background="#FFB8B8B8"
+                Foreground="Black"
+                Click="ButtonStart_OnClickAsync"
+            />
+            <Button 
+                x:Name="ButtonStop" 
+                Content="Остановить"
+                FontWeight="Medium"
+                Height="25"
+                Width="90" 
+                Margin="50, 0, 0, 0"
+                Background="#FFB8B8B8"
+                Foreground="Black"
+                Click="ButtonStop_OnClickAsync"
+            />
+        </StackPanel>
+
+        <StatusBar
+            Grid.Row="2"
+            FontSize="12"
+            FontWeight="Normal"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Center"
+            Background="#FF2C2828">
+            <StatusBarItem>
+                <TextBlock 
+                    x:Name="Status" 
+                    Foreground="White"
+                    Text="Добро пожаловать"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"/>
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+</Window>

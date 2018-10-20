@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="TicTacToe">
+  <DataContextMoniker Name="/TicTacToeDataContext" />
+  <nestedChildShapes>
+    <classShape Id="f987dccd-0584-48b5-910c-ecd09d85fc50" absoluteBounds="0.75, 3.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/TicTacToeDataContext/Client" />
+      <nestedChildShapes>
+        <elementListCompartment Id="66f0a45c-a193-4a38-88f7-48625927fafc" absoluteBounds="0.765, 4.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d53fb825-4596-4fe5-ab6a-61274227c67d" absoluteBounds="3.5, 0.875, 2, 1.7708968098958333">
+      <DataClassMoniker Name="/TicTacToeDataContext/GameHistory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f2b70bd4-e196-455a-9797-84232c2c4dc1" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c50f73d6-372b-4929-ba7a-52aeadade79e" absoluteBounds="0.75, 1.25, 2, 1.1939925130208338">
+      <DataClassMoniker Name="/TicTacToeDataContext/GameResult" />
+      <nestedChildShapes>
+        <elementListCompartment Id="88463630-2baa-43ef-8085-980b05682952" absoluteBounds="0.765, 1.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.84699625651042); (3.5 : 1.84699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TicTacToeDataContext/GameResult/GameResult_GameHistory" />
+      <nodes>
+        <classShapeMoniker Id="c50f73d6-372b-4929-ba7a-52aeadade79e" />
+        <classShapeMoniker Id="d53fb825-4596-4fe5-ab6a-61274227c67d" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

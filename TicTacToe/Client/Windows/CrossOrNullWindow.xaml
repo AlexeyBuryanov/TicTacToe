@@ -1,0 +1,79 @@
+﻿<Window x:Class="Client.Windows.CrossOrNullWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        
+        Title="Крестик или нолик?" 
+        Height="200" 
+        Width="450"
+        ResizeMode="NoResize" 
+        WindowStartupLocation="CenterOwner" 
+        ShowInTaskbar="False"
+        WindowStyle="None"
+        AllowsTransparency="True">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Button
+            x:Name="ButtonCrossChoice"
+            Grid.Column="0"
+            Click="ButtonCrossChoice_OnClick">
+            <Grid
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Visibility="Visible"
+                Margin="10">
+                <Line
+                    X1="100" 
+                    Y1="30" 
+                    X2="200" 
+                    Y2="150" 
+                    Stroke="Blue" 
+                    StrokeThickness="20"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    Stretch="Uniform"
+                />
+                <Line 
+                    X1="100" 
+                    Y1="150" 
+                    X2="200" 
+                    Y2="30" 
+                    Stroke="Blue"
+                    StrokeThickness="20"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    Stretch="Uniform"
+                />
+            </Grid>
+        </Button>
+        <Button
+            x:Name="ButtonNullChoice"
+            Grid.Column="1"
+            Click="ButtonNullChoice_OnClick">
+            <Path
+                Fill="Red" 
+                Stroke="DarkRed"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Stretch="Uniform"
+                Visibility="Visible"
+                Margin="10">
+                <Path.Data>
+                    <CombinedGeometry GeometryCombineMode="Exclude">
+                        <CombinedGeometry.Geometry1>
+                            <EllipseGeometry RadiusX="70" RadiusY="70" />
+                        </CombinedGeometry.Geometry1>
+                        <CombinedGeometry.Geometry2>
+                            <EllipseGeometry RadiusX="50" RadiusY="50" />
+                        </CombinedGeometry.Geometry2>
+                    </CombinedGeometry>
+                </Path.Data>
+            </Path>
+        </Button>
+    </Grid>
+</Window>
