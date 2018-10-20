@@ -11,6 +11,7 @@ To invite to the game click right mouse button on the user who is online.
 - MS SQL DB;
 - LINQ to SQL;
 - MVVM;
+- Data Binding;
 - Custom styles;
 - Custom window;
 - Game lobby with chat;
