@@ -1,4 +1,7 @@
-# Network game Tic-Tac-Toe based on WPF and WCF 
+[license-image]: https://img.shields.io/npm/l/normalize.css.svg?style=flat
+[license-url]: LICENSE
+
+# Network game Tic-Tac-Toe based on WPF and WCF [![license][license-image]][license-url]
 
 To invite to the game click right mouse button on the user who is online.
 
